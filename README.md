@@ -1,5 +1,6 @@
 # 🎯 Skill Swap - A Local Skill Exchange Platform
 
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 An interactive web platform where people can **offer, learn, and exchange skills** within their local area. Whether it’s guitar lessons, coding help, yoga sessions, or language exchange - users can **browse listings, connect with providers, and book skill sessions** easily.
@@ -35,3 +36,9 @@ Abdullah Al Mamun ( aamamunszone )
 - 🔗 GitHub : [@aamamunszone](https://github.com/aamamunszone)
 - 🔗 Email : [aamamunszone@gmail.com](mailto:aamamunszone@gmail.com)
 - 🔗 Portfolio : _(coming soon)_
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
