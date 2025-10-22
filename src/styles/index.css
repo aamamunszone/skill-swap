@@ -2,4 +2,53 @@
 @import 'tailwindcss';
 
 /* DaisyUI */
-@plugin "daisyui";
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: light --default;
+}
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: true;
+  /* Base Colors - Clean & Light Background */
+  --color-base-100: #fafbfc; /* Lightest background */
+  --color-base-200: #f3f4f6; /* Secondary background */
+  --color-base-300: #e5e7eb; /* Borders & dividers */
+  --color-base-content: #1f2937; /* Primary text color */
+
+  /* Primary - Professional Blue (Trust & Reliability) */
+  --color-primary: #3b82f6; /* Main brand color */
+  --color-primary-content: #ffffff; /* Text on primary */
+
+  /* Secondary - Vibrant Purple (Creativity & Learning) */
+  --color-secondary: #8b5cf6; /* Secondary actions */
+  --color-secondary-content: #ffffff; /* Text on secondary */
+
+  /* Accent - Fresh Teal (Connection & Community) */
+  --color-accent: #14b8a6; /* Highlights & CTAs */
+  --color-accent-content: #ffffff; /* Text on accent */
+
+  /* Neutral - Balanced Gray (UI Elements) */
+  --color-neutral: #6b7280; /* Subtle elements */
+  --color-neutral-content: #ffffff; /* Text on neutral */
+
+  /* Info - Calm Blue (Information) */
+  --color-info: #0ea5e9; /* Info messages */
+  --color-info-content: #ffffff; /* Text on info */
+
+  /* Success - Fresh Green (Achievements) */
+  --color-success: #10b981; /* Success states */
+  --color-success-content: #ffffff; /* Text on success */
+
+  /* Warning - Warm Amber (Caution) */
+  --color-warning: #f59e0b; /* Warning states */
+  --color-warning-content: #1f2937; /* Text on warning (dark for contrast) */
+
+  /* Error - Bold Red (Errors & Validation) */
+  --color-error: #ef4444; /* Error states */
+  --color-error-content: #ffffff; /* Text on error */
+}
+
+/* For Debugging */
+/* * {
+  border: 1px solid red;
+} */

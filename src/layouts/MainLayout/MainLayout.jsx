@@ -1,9 +1,25 @@
 import React from 'react';
+import Header from '../../components/shared/Header/Header';
+import { Outlet } from 'react-router';
+import Footer from '../../components/shared/Footer/Footer';
 
 const MainLayout = () => {
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className="flex flex-col justify-between min-h-screen">
+      {/* Header Section */}
+      <header className="shadow-md sticky top-0 z-50">
+        <Header />
+      </header>
+
+      {/* Main Section */}
+      <main className="flex-1 py-5">
+        <Outlet />
+      </main>
+
+      {/* Footer Section */}
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
