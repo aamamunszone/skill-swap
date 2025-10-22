@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <Container>
-      <div className="navbar">
+      <div className="navbar py-2.5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="lg:hidden">

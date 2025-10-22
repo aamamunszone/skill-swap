@@ -7,12 +7,12 @@ const MainLayout = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen">
       {/* Header Section */}
-      <header className="shadow-md sticky top-0 z-50">
+      <header className="bg-base-100 sticky top-0 z-10">
         <Header />
       </header>
 
       {/* Main Section */}
-      <main className="flex-1 py-5">
+      <main className="flex-1">
         <Outlet />
       </main>
 
