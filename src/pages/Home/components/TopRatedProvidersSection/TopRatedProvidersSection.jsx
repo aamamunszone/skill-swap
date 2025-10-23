@@ -1,80 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Container from '../../../../components/common/Container/Container';
+import { SkillsContext } from '../../../../contexts/SkillsContext';
+import Loader from '../../../../components/common/Loader/Loader';
 
 const TopRatedProvidersSection = () => {
-  const [providers, setProviders] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { skills, loading } = useContext(SkillsContext);
 
-  useEffect(() => {
-    // Fetch skills and extract unique providers
-    fetch('/data/skills.json')
-      .then((res) => res.json())
-      .then((data) => {
-        // Group skills by provider and calculate average rating
-        const providerMap = {};
-
-        data.forEach((skill) => {
-          if (!providerMap[skill.providerEmail]) {
-            providerMap[skill.providerEmail] = {
-              name: skill.providerName,
-              email: skill.providerEmail,
-              skills: [],
-              totalRating: 0,
-              category: skill.category,
-            };
-          }
-          providerMap[skill.providerEmail].skills.push(skill);
-          providerMap[skill.providerEmail].totalRating += skill.rating;
-        });
-
-        // Convert to array and calculate average ratings
-        const providersArray = Object.values(providerMap).map((provider) => ({
-          ...provider,
-          averageRating: (
-            provider.totalRating / provider.skills.length
-          ).toFixed(1),
-          skillCount: provider.skills.length,
-          totalStudents: Math.floor(Math.random() * 500) + 100, // Mock data
-          profileImage: generateProfileImage(provider.name),
-        }));
-
-        // Sort by average rating and get top providers
-        const topProviders = providersArray
-          .sort((a, b) => b.averageRating - a.averageRating)
-          .slice(0, 10);
-
-        setProviders(topProviders);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error loading providers:', error);
-        setLoading(false);
-      });
-  }, []);
-
-  // Generate profile image URL based on name
+  //  Generate profile image URL based on name
   const generateProfileImage = (name) => {
     const seed = encodeURIComponent(name);
     return `https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`;
   };
 
+  const providers = useMemo(() => {
+    if (!skills.length) return [];
+
+    const providerMap = {};
+
+    skills.forEach((skill) => {
+      if (!providerMap[skill.providerEmail]) {
+        providerMap[skill.providerEmail] = {
+          name: skill.providerName,
+          email: skill.providerEmail,
+          skills: [],
+          totalRating: 0,
+          category: skill.category,
+        };
+      }
+      providerMap[skill.providerEmail].skills.push(skill);
+      providerMap[skill.providerEmail].totalRating += skill.rating;
+    });
+
+    return Object.values(providerMap)
+      .map((provider) => ({
+        ...provider,
+        averageRating: (provider.totalRating / provider.skills.length).toFixed(
+          1
+        ),
+        skillCount: provider.skills.length,
+        totalStudents: Math.floor(Math.random() * 500) + 100,
+        profileImage: generateProfileImage(provider.name),
+      }))
+      .sort((a, b) => b.averageRating - a.averageRating)
+      .slice(0, 10);
+  }, [skills]);
+
   if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-[400px]">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-600"></div>
-      </div>
-    );
+    return <Loader />;
   }
 
   return (
     <div className="py-16 md:py-24 bg-linear-to-br from-blue-50 via-white to-cyan-50">
       <Container>
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fadeIn">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
             Top Rated{' '}
             <span className="bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -95,7 +78,7 @@ const TopRatedProvidersSection = () => {
             slidesPerView={1}
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 2500,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
@@ -122,14 +105,11 @@ const TopRatedProvidersSection = () => {
                 spaceBetween: 32,
               },
             }}
-            className="providers-swiper pb-12"
+            className="pb-12"
           >
-            {providers.map((provider, index) => (
+            {providers.map((provider) => (
               <SwiperSlide key={provider.email}>
-                <div
-                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 p-6 animate-slideUp"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+                <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 p-6">
                   {/* Profile Image */}
                   <div className="relative mb-4">
                     <div className="w-24 h-24 mx-auto rounded-full bg-linear-to-br from-blue-400 to-cyan-400 p-1 group-hover:scale-110 transition-transform duration-300">
@@ -221,7 +201,7 @@ const TopRatedProvidersSection = () => {
                     </div>
 
                     {/* View Profile Button */}
-                    <button className="w-full py-2.5 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                    <button className="w-full py-2.5 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-lg hover:shadow-lg hover:scale-103 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
                       View Profile
                       <svg
                         className="w-4 h-4"

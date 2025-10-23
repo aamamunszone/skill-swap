@@ -3,22 +3,28 @@ import { NavLink } from 'react-router';
 
 const NavItem = ({ to, children, className = '' }) => {
   return (
-    <>
-      <li>
-        <NavLink
-          to={to}
-          className={({ isActive }) =>
-            `px-2.5 py-1 leading-relaxed rounded-md flex justify-center items-center ${
-              isActive
-                ? 'bg-primary text-primary-content hover:bg-[#2563EB]'
-                : 'bg-base-200 border border-base-300'
-            } ${className}`
-          }
-        >
-          {children}
-        </NavLink>
-      </li>
-    </>
+    <li>
+      <NavLink
+        to={to}
+        className={({ isActive }) =>
+          `
+          px-3 py-1.5 
+          rounded-md 
+          font-medium 
+          transition-all duration-200 ease-in-out 
+          flex justify-center items-center gap-1
+          ${
+            isActive
+              ? 'bg-primary text-primary-content shadow-sm'
+              : 'text-base-content/80 hover:text-primary hover:bg-base-200'
+          } 
+          ${className}
+        `
+        }
+      >
+        {children}
+      </NavLink>
+    </li>
   );
 };
 

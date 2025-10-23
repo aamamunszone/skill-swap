@@ -6,7 +6,7 @@ import HowItWorksSection from './components/HowItWorksSection/HowItWorksSection'
 
 const Home = () => {
   return (
-    <div>
+    <>
       {/* Hero Section */}
       <section>
         <HeroSection />
@@ -26,7 +26,7 @@ const Home = () => {
       <section>
         <HowItWorksSection />
       </section>
-    </div>
+    </>
   );
 };
 

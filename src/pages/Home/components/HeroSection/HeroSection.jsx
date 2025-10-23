@@ -82,7 +82,7 @@ const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="w-full h-[85vh] relative overflow-hidden">
+    <div className="w-full h-[calc(100vh-80px)] relative overflow-hidden">
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
         pagination={{
@@ -92,14 +92,14 @@ const HeroSection = () => {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
-          pauseOnMouseEnter: false,
+          pauseOnMouseEnter: true,
         }}
         effect="fade"
         fadeEffect={{ crossFade: true }}
         speed={1200}
         loop
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        className="h-full hero-swiper"
+        className="h-full"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
@@ -159,9 +159,9 @@ const HeroSection = () => {
                       <motion.button
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.98 }}
-                        className="group relative px-6 py-3 bg-linear-to-r from-blue-600 to-cyan-500 rounded-full font-bold text-lg shadow-2xl overflow-hidden transition-all duration-300"
+                        className="relative px-6 py-3 bg-linear-to-r from-blue-600 to-cyan-500 rounded-full font-bold text-lg shadow-2xl overflow-hidden transition-all duration-300 cursor-pointer"
                       >
-                        <span className="relative z-10 flex items-center gap-2">
+                        <span className="group relative z-10 flex items-center gap-2">
                           Explore Skills
                           <svg
                             className="w-5 h-5 group-hover:translate-x-1 transition-transform"
@@ -183,7 +183,7 @@ const HeroSection = () => {
                       <motion.button
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.98 }}
-                        className="px-6 py-3 bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full font-bold text-lg shadow-xl hover:bg-white/20 transition-all duration-300"
+                        className="px-6 py-3 bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full font-bold text-lg shadow-xl hover:bg-white/20 transition-all duration-300 cursor-pointer"
                       >
                         Learn More
                       </motion.button>

@@ -8,13 +8,15 @@ const Header = () => {
   const navLinks = (
     <>
       <NavItem to="/home">Home</NavItem>
+      <NavItem to="/all-skills">All Skills</NavItem>
       <NavItem to="/about">About</NavItem>
       <NavItem to="/contact">Contact</NavItem>
+      <NavItem to="/my-profile">My Profile</NavItem>
     </>
   );
 
   return (
-    <Container>
+    <Container className="bg-white/80 backdrop-blur-md rounded-b-full px-10 overflow-hidden">
       <div className="navbar py-2.5">
         <div className="navbar-start">
           <div className="dropdown">
@@ -45,14 +47,12 @@ const Header = () => {
           {/* Logo with Name */}
           <Link className="flex justify-between items-center gap-2.5">
             <div>
-              <img
-                className="w-[48px]"
-                src={SkillSwapLogo}
-                alt="Skill-Swap Logo"
-              />
+              <img className="w-15" src={SkillSwapLogo} alt="Skill-Swap Logo" />
             </div>
             <div>
-              <h1>Skill-Swap</h1>
+              <h1 className="text-2xl font-bold leading-relaxed tracking-wide bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Skill-Swap
+              </h1>
             </div>
           </Link>
         </div>
@@ -60,11 +60,30 @@ const Header = () => {
           <ul className="menu menu-horizontal px-1 gap-5">{navLinks}</ul>
         </div>
         <div className="navbar-end gap-2.5">
-          <Link className="px-2.5 py-1 leading-relaxed rounded-md flex justify-center items-center bg-accent text-accent-content">
+          <Link
+            to="/auth"
+            className="px-3 py-1.5 border border-base-300 bg-base-100 font-semibold rounded-md hover:shadow-md hover:scale-103 transition-all duration-300"
+          >
             Login
           </Link>
-          <Link className="px-2.5 py-1 leading-relaxed rounded-md flex justify-center items-center bg-accent text-accent-content">
-            Register
+          <Link
+            to="/auth/register"
+            className="px-3 py-2 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full hover:shadow-md hover:scale-103 transition-all duration-300 flex items-center gap-2"
+          >
+            Get Started
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </Link>
         </div>
       </div>

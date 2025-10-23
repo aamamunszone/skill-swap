@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Container>
       {/* Top Footer */}
-      <div className="footer sm:footer-horizontal p-10">
+      <div className="flex justify-between footer sm:footer-horizontal py-10">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -43,7 +43,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="footer sm:footer-horizontal footer-center p-4">
+      <div className="footer sm:footer-horizontal footer-center py-5">
         <aside>
           <p>
             Copyright © {new Date().getFullYear()} - All right reserved by
