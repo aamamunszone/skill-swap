@@ -30,7 +30,7 @@ const Footer = () => {
           <h6 className="footer-title">Newsletter</h6>
           <fieldset className="w-80">
             <label>Enter your email address</label>
-            <div className="join">
+            <div className="join mt-2">
               <input
                 type="text"
                 placeholder="username@site.com"
