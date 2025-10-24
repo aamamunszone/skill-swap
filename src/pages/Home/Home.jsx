@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection/HeroSection';
 import PopularSkills from './components/PopularSkills/PopularSkills';
 import TopRatedProvidersSection from './components/TopRatedProvidersSection/TopRatedProvidersSection';
 import HowItWorksSection from './components/HowItWorksSection/HowItWorksSection';
+import TestimonialsSection from './components/TestimonialsSection/TestimonialsSection';
 
 const Home = () => {
   return (
@@ -25,6 +26,11 @@ const Home = () => {
       {/* How It Works Section */}
       <section>
         <HowItWorksSection />
+      </section>
+
+      {/* Testimonials Section */}
+      <section>
+        <TestimonialsSection />
       </section>
     </>
   );

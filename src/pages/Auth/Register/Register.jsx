@@ -406,6 +406,7 @@ const Register = () => {
               Already have an account?{' '}
               <Link
                 to="/auth/login"
+                state={{ from: location.state?.from || location }}
                 className="text-blue-600 font-bold hover:underline"
               >
                 Login Here

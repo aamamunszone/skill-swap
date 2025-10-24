@@ -54,7 +54,7 @@ const TopRatedProvidersSection = () => {
   }
 
   return (
-    <div className="py-16 md:py-24 bg-linear-to-br from-blue-50 via-white to-cyan-50">
+    <div className="py-16 md:py-24 bg-linear-to-tr from-blue-50 via-white to-cyan-50">
       <Container>
         {/* Section Header */}
         <div className="text-center mb-12">

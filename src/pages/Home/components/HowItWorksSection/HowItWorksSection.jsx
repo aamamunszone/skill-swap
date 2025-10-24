@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from '../../../../components/common/Container/Container';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const HowItWorksSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   const steps = [
     {
       id: 1,
@@ -117,7 +127,12 @@ const HowItWorksSection = () => {
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {steps.map((step, index) => (
-            <div key={step.id} className="relative group">
+            <div
+              key={step.id}
+              className="relative group"
+              data-aos="flip-left"
+              data-aos-delay={index * 100}
+            >
               {/* Connecting Line (Hidden on mobile) */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-linear-to-r from-gray-300 to-transparent -translate-y-1/2 z-0"></div>
@@ -153,40 +168,6 @@ const HowItWorksSection = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-linear-to-r from-blue-600 to-cyan-500 rounded-3xl p-8 md:p-12 shadow-2xl">
-            <h3 className="text-3xl md:text-4xl font-black text-white mb-4">
-              Ready to Start Learning?
-            </h3>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of learners and instructors building skills
-              together. Your journey begins today!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full hover:scale-103 hover:shadow-xl transition-all duration-300 flex items-center gap-2 cursor-pointer">
-                Browse All Skills
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </button>
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/20 hover:scale-103 transition-all duration-300 cursor-pointer">
-                Become a Provider
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           {[
@@ -198,6 +179,8 @@ const HowItWorksSection = () => {
             <div
               key={index}
               className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              data-aos="flip-up"
+              data-aos-delay={index * 100} // stagger the animation effect
             >
               <div className="text-3xl md:text-4xl font-black bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
                 {stat.number}
