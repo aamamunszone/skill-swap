@@ -92,7 +92,7 @@ const SkillCard = ({ skill }) => {
 
           <Link
             to={`/skill/${skill.skillId}`}
-            className="px-6 py-2.5 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-full hover:shadow-lg hover:scale-103 transition-all duration-300 flex items-center gap-2"
+            className="px-6 py-2.5 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-full hover:shadow-lg hover:scale-103 transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
           >
             View Details
             <svg

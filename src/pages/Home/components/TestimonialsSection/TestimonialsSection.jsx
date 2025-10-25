@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
       id: 6,
       name: 'James Wilson',
       role: 'Data Analyst',
-      image: 'https://i.pravatar.cc/150?img=12',
+      image: 'https://i.pravatar.cc/150?img=68',
       rating: 5,
       text: 'The data science bootcamp was worth every penny. Real-world projects, expert guidance, and a supportive community made complex topics easy to understand. Highly recommend!',
       skill: 'Data Science',

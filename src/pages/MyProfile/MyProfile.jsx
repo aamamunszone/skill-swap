@@ -16,6 +16,8 @@ const MyProfile = () => {
 
   return (
     <section className="py-12 bg-linear-to-br from-blue-50 via-white to-cyan-50 min-h-screen">
+      <title>Skill-Swap | My Profile</title>
+
       <Container>
         {/* Page Header */}
         <div className="mb-8">

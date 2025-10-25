@@ -103,6 +103,8 @@ const Login = () => {
 
   return (
     <section className="bg-linear-to-br from-blue-50 via-white to-cyan-50 min-h-screen">
+      <title>Skill-Swap | Login</title>
+
       <Container className="flex justify-between items-center py-12">
         {/* Left Banner */}
         <div className="hidden lg:flex w-1/2 items-center justify-center px-12">

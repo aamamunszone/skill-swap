@@ -11,6 +11,8 @@ const AllSkills = () => {
 
   return (
     <div className="py-16 md:py-24 bg-linear-to-br from-blue-50 via-white to-cyan-50">
+      <title>Skill-Swap | All Skills</title>
+
       <Container>
         {/* Section Header */}
         <div className="text-center mb-12 animate-fadeIn">

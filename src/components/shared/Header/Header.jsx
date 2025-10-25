@@ -36,10 +36,10 @@ const Header = () => {
       <div className="navbar py-2.5">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="lg:hidden mr-2">
+            <div tabIndex={0} role="button" className="lg:hidden mr-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-8 w-8"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -62,8 +62,8 @@ const Header = () => {
           </div>
           {/* Logo with Name */}
           <Link to="/" className="flex justify-between items-center gap-2.5">
-            <div className='hidden lg:block'>
-              <img className="w-15" src={SkillSwapLogo} alt="Skill-Swap Logo" />
+            <div>
+              <img className="w-10" src={SkillSwapLogo} alt="Skill-Swap Logo" />
             </div>
             <div>
               <h1 className="text-lg md:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent whitespace-nowrap">
@@ -80,7 +80,7 @@ const Header = () => {
             <>
               <Link
                 to="/auth"
-                className="py-1 px-2 lg:px-3 md:py-1 lg:py-1.5 border border-base-300 bg-base-100 font-semibold rounded-md hover:shadow-md hover:scale-103 transition-all duration-300"
+                className="hidden md:inline-block py-1 px-2 lg:px-3 md:py-1 lg:py-1.5 border border-base-300 bg-base-100 font-semibold rounded-md hover:shadow-md hover:scale-103 transition-all duration-300"
               >
                 Login
               </Link>

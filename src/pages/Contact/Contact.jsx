@@ -3,6 +3,8 @@ import Container from '../../components/common/Container/Container';
 const Contact = () => {
   return (
     <section className="min-h-screen bg-linear-to-br from-blue-50 via-white to-cyan-50 py-16">
+      <title>Skill-Swap | Contact</title>
+
       <Container className="max-w-3xl lg:px-6">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
           Contact Us

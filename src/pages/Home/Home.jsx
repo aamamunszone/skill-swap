@@ -8,6 +8,8 @@ import TestimonialsSection from './components/TestimonialsSection/TestimonialsSe
 const Home = () => {
   return (
     <>
+      <title>Skill-Swap | Home</title>
+
       {/* Hero Section */}
       <section>
         <HeroSection />

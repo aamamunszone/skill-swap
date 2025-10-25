@@ -89,6 +89,8 @@ const UpdateProfile = () => {
 
   return (
     <section className="bg-linear-to-br from-blue-50 via-white to-cyan-50 min-h-screen py-12">
+      <title>Skill-Swap | Update Profile</title>
+
       <Container>
         {/* Back Button */}
         <button

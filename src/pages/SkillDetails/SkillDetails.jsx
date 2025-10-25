@@ -97,6 +97,8 @@ const SkillDetails = () => {
 
   return (
     <section className="py-12 bg-linear-to-br from-blue-50 via-white to-cyan-50 min-h-screen">
+      <title>Skill-Swap | Skill Details</title>
+
       <Container>
         {/* Breadcrumb */}
         <div className="mb-8 flex items-center gap-2 text-sm text-gray-600">
