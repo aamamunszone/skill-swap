@@ -199,8 +199,8 @@ const Register = () => {
         </div>
 
         {/* Right Register Form */}
-        <div className="flex w-full lg:w-1/2 items-center justify-center py-8 px-6">
-          <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl p-10 max-w-md w-full space-y-6 border border-gray-200">
+        <div className="flex w-full lg:w-1/2 items-center justify-center md:py-4 md:px-3 lg:py-8 lg:px-6">
+          <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl p-5 md:p-8 lg:p-10 max-w-md w-full space-y-6 border border-gray-200">
             <div className="text-center">
               <h2 className="text-3xl font-black text-gray-900">
                 Create Your Account

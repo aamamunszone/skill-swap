@@ -17,7 +17,7 @@ const MainLayout = () => {
       </main>
 
       {/* Footer Section */}
-      <footer className="bg-base-200">
+      <footer>
         <Footer />
       </footer>
     </div>

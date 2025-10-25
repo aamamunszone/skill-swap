@@ -153,8 +153,8 @@ const ForgotPassword = () => {
         </div>
 
         {/* Right Form */}
-        <div className="flex w-full lg:w-1/2 items-center justify-center py-8 px-6">
-          <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl p-10 max-w-md w-full space-y-6 border border-gray-200">
+        <div className="flex w-full lg:w-1/2 items-center justify-center md:py-4 md:px-3 lg:py-8 lg:px-6">
+          <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl p-5 md:p-8 lg:p-10 max-w-md w-full space-y-6 border border-gray-200">
             {/* Icon */}
             <div className="flex justify-center mb-4">
               <div className="w-16 h-16 bg-linear-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center">

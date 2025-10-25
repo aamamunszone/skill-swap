@@ -3,7 +3,7 @@ import Container from '../../components/common/Container/Container';
 const Contact = () => {
   return (
     <section className="min-h-screen bg-linear-to-br from-blue-50 via-white to-cyan-50 py-16">
-      <Container className="max-w-3xl mx-auto px-6">
+      <Container className="max-w-3xl lg:px-6">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
           Contact Us
         </h1>
@@ -12,7 +12,7 @@ const Contact = () => {
           you!
         </p>
 
-        <form className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl p-8 flex flex-col gap-6 border border-gray-200">
+        <form className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl p-5 md:p-8 lg:p-10 flex flex-col gap-6 border border-gray-200">
           <div>
             <label className="block text-gray-700 font-semibold mb-2">
               Full Name <span className="text-red-500">*</span>

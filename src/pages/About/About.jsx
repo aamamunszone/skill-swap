@@ -4,7 +4,7 @@ import SkillSwapLogo from '../../assets/logos/skill-swap-logo.png';
 const About = () => {
   return (
     <section className="min-h-screen bg-linear-to-br from-blue-50 via-white to-cyan-50 py-16">
-      <Container className="max-w-4xl mx-auto text-center px-6">
+      <Container className="max-w-4xl text-center px-3 lg:px-6">
         <img
           src={SkillSwapLogo}
           alt="SkillSwap Logo"

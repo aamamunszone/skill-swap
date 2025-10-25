@@ -32,14 +32,14 @@ const Header = () => {
   );
 
   return (
-    <Container className="bg-white/80 backdrop-blur-md rounded-b-full px-10 overflow-hidden">
+    <Container className="bg-white/80 backdrop-blur-md rounded-b-4xl md:rounded-b-full px-1 md:px-5 lg:px-10 w-full">
       <div className="navbar py-2.5">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="lg:hidden">
+            <div tabIndex={0} role="button" className="lg:hidden mr-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -55,18 +55,18 @@ const Header = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content rounded-box z-1 mt-7 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content rounded-box z-50 mt-7 w-52 p-2 shadow bg-white"
             >
               {navLinks}
             </ul>
           </div>
           {/* Logo with Name */}
           <Link to="/" className="flex justify-between items-center gap-2.5">
-            <div>
+            <div className='hidden lg:block'>
               <img className="w-15" src={SkillSwapLogo} alt="Skill-Swap Logo" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold leading-relaxed tracking-wide bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              <h1 className="text-lg md:text-xl lg:text-2xl font-bold leading-relaxed tracking-wide bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent whitespace-nowrap">
                 Skill-Swap
               </h1>
             </div>
@@ -80,13 +80,13 @@ const Header = () => {
             <>
               <Link
                 to="/auth"
-                className="px-3 py-1.5 border border-base-300 bg-base-100 font-semibold rounded-md hover:shadow-md hover:scale-103 transition-all duration-300"
+                className="py-1 px-2 lg:px-3 md:py-1 lg:py-1.5 border border-base-300 bg-base-100 font-semibold rounded-md hover:shadow-md hover:scale-103 transition-all duration-300"
               >
                 Login
               </Link>
               <Link
                 to="/auth/register"
-                className="px-3 py-2 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full hover:shadow-md hover:scale-103 transition-all duration-300 flex items-center gap-2"
+                className="py-1.5 px-2.5 lg:px-3 md:py-1 lg:py-1.5 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full hover:shadow-md hover:scale-103 transition-all duration-300 flex items-center gap-0.5 lg:gap-2 whitespace-nowrap"
               >
                 Get Started
                 <svg
@@ -128,7 +128,7 @@ const Header = () => {
                 {/* Logout Button */}
                 <button
                   onClick={handleLogout}
-                  className="px-3 py-2 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full hover:shadow-md hover:scale-105 transition-all duration-300"
+                  className="py-1.5 px-2.5 lg:px-3 md:py-1 lg:py-1.5 bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full hover:shadow-md hover:scale-105 transition-all duration-300"
                 >
                   Logout
                 </button>
