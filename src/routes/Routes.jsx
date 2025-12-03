@@ -13,6 +13,7 @@ import PrivateRoutes from './PrivateRoutes';
 import SkillDetails from '../pages/SkillDetails/SkillDetails';
 import MyProfile from '../pages/MyProfile/MyProfile';
 import UpdateProfile from '../pages/UpdateProfile/UpdateProfile';
+import Services from '../pages/Services/Services';
 
 export const router = createBrowserRouter([
   // Main Layout
@@ -26,14 +27,11 @@ export const router = createBrowserRouter([
       { path: 'all-skills', Component: AllSkills },
       {
         path: 'skill/:id',
-        element: (
-          <PrivateRoutes>
-            <SkillDetails />
-          </PrivateRoutes>
-        ),
+        Component: SkillDetails,
       },
       { path: 'about', Component: About },
       { path: 'contact', Component: Contact },
+      { path: 'services', Component: Services },
       {
         path: 'my-profile',
         element: (

@@ -31,8 +31,8 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex gap-3">
               <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110"
+                href="https://x.com/aamamunszone"
+                className="w-10 h-10 bg-white/10 hover:bg-black rounded-lg flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const Footer = () => {
                   viewBox="0 0 24 24"
                   className="fill-current"
                 >
-                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                  <path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z" />
                 </svg>
               </a>
               <a
@@ -59,7 +59,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/aamamunszone"
                 className="w-10 h-10 bg-white/10 hover:bg-blue-700 rounded-lg flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:scale-110"
               >
                 <svg

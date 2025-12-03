@@ -27,6 +27,7 @@ const Header = () => {
       <NavItem to="/all-skills">All Skills</NavItem>
       <NavItem to="/about">About</NavItem>
       <NavItem to="/contact">Contact</NavItem>
+      <NavItem to="/services">Services</NavItem>
       {user && <NavItem to="/my-profile">My Profile</NavItem>}
     </>
   );
